@@ -88,7 +88,7 @@
     PATCH  /users/:id/block  Заблокировать пользователя       Да            Себя или админ
     ```
 7. Запустите setup-users(ps1/sh) для демонстрации
-   Примеры одиночных запросов (curl)
+8. Примеры одиночных запросов (curl)
 
     - Регистрация:
     ```
@@ -98,12 +98,12 @@
     ```
     curl -X POST http://localhost:3000/users/login -H "Content-Type: application/json" -d '{"email":"test@example.com","password":"pass123"}'
     ```
-    - Блокировка (замените <TOKEN> и <ID>):
+    - Блокировка (замените `<TOKEN>` и `<ID>`):
     ```
     curl -X PATCH http://localhost:3000/users/<ID>/block -H "Authorization: Bearer <TOKEN>" -H "Content-Type: application/json"
     ```
    
-8. Решения и практики:
+9. Решения и практики:
     - Слои (controllers → services → prisma)
     - Разделение ответственности (Separation of Concerns)
     - Middleware для аутентификации и авторизации
